@@ -8,7 +8,7 @@
 void cout_centered(std::string text)
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); // Get the console handle.
-	
+
 	// Create a pointer to the Screen Info pointing to a temporal screen info.
 	PCONSOLE_SCREEN_BUFFER_INFO lpScreenInfo = new CONSOLE_SCREEN_BUFFER_INFO();
 
@@ -26,4 +26,6 @@ void cout_centered(std::string text)
 	}
 
 	std::cout << text << std::endl; // Prints the text centered :]
+
+	delete lpScreenInfo;
 }
