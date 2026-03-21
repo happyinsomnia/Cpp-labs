@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Moving segment/Moving segment.vcxproj" Id="ee2c38d2-11d7-4455-bd9a-4bddbcf2ce45" />
+</Solution>
