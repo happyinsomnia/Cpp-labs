@@ -1,4 +1,4 @@
-#include "geometric_vector.h"
+#include "geometric_vector.hpp"
 
 namespace segment::geometry
 {

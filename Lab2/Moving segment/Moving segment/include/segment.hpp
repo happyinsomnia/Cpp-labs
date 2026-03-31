@@ -1,10 +1,10 @@
 #pragma once
-#include "geometric_vector.h"
+#include "geometric_vector.hpp"
 #include<queue>
 
 namespace segment
 {
-	class Segment	
+	class Segment
 	{
 	public:
 		Segment();

@@ -1,4 +1,4 @@
-#include "segment.h"
+#include "segment.hpp"
 #include<stdexcept>
 namespace segment
 {
@@ -11,7 +11,8 @@ namespace segment
 
 	Segment::Segment(std::initializer_list<geometry::GeometricVector> init)
 	{
-		_body.emplace(init);
+		for (const auto& element : init)
+			_body.emplace(element);
 	}
 
 	void Segment::move(Direction dir)
@@ -25,4 +26,3 @@ namespace segment
 			throw std::invalid_argument("length must be positive.");
 	}
 }
-
