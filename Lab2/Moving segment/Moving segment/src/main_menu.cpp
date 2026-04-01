@@ -87,7 +87,8 @@ void MainMenu::Update(sf::Time delTime)
 	if (m_isPlayButtonSelected)
 	{
 		m_playButton->setFillColor(sf::Color::Yellow);
-		m_exitButton->setFillColor(sf::Color::White); 
+
+		m_exitButton->setFillColor(sf::Color::White);
 	}
 
 	else

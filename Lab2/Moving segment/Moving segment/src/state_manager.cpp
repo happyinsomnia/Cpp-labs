@@ -39,7 +39,7 @@ void engine::StateManager::ProcessStateChange()
 
 		if (!m_stateStack.empty())
 			m_stateStack.top()->Pause();
-		
+
 		m_stateStack.emplace(std::move(m_newState));
 		m_stateStack.top()->Initialize();
 		m_stateStack.top()->Start();
