@@ -6,7 +6,7 @@
 
 Game::Game() : m_context(std::make_shared<Context>())
 {
-	m_context->m_window->create(sf::VideoMode({ 200,200 }), "SFML works", sf::Style::Close);
+	m_context->m_window->create(sf::VideoMode(sf::Vector2u(1024, 768)), "SFML works", sf::Style::Close);
 	m_context->m_states->Add(std::make_unique<MainMenu>(m_context));
 }
 
@@ -14,13 +14,9 @@ Game::~Game() {}
 
 void Game::Run()
 {
-	sf::CircleShape shape(100.f);
-
 	sf::Clock clock;
 
 	sf::Time timeSinceLastFrame = sf::Time::Zero;
-
-	shape.setFillColor(sf::Color::Red);
 
 	while (m_context->m_window->isOpen())
 	{
@@ -34,7 +30,6 @@ void Game::Run()
 			m_context->m_states->GetCurrent()->ProcessInput();
 			m_context->m_states->GetCurrent()->Update(TIME_PER_FRAME);
 			m_context->m_states->GetCurrent()->Draw();
-
 		}
 	}
 }
