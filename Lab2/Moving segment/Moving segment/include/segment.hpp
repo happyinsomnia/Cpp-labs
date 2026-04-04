@@ -1,30 +1,35 @@
 #pragma once
-#include "geometric_vector.hpp"
-#include<queue>
+
+#include<SFML/Graphics/Sprite.hpp>
+#include<SFML/Graphics/Texture.hpp>
+#include<SFML/Graphics/Drawable.hpp>
+#include<SFML/Graphics/RenderTarget.hpp>
+#include<SFML/Graphics/RenderStates.hpp>
+#include<SFML/Graphics/RectangleShape.hpp>
+#include <list>
 
 namespace segment
 {
-	class Segment
+	class Segment : public sf::Drawable
 	{
-	public:
-		Segment();
-		Segment(geometry::GeometricVector start);
-		Segment(std::initializer_list<geometry::GeometricVector> init);
-
-		enum class Direction
-		{
-			UP,
-			DOWN,
-			LEFT,
-			RIGHT
-		};
-
-		void move(Direction dir);
-		void grow();
-		void shrink();
 
 	private:
-		std::queue<geometry::GeometricVector> _body;
-		void check_size();
+		std::list<sf::RectangleShape> m_body;	
+		std::list<sf::RectangleShape>::iterator m_head;
+		std::list<sf::RectangleShape>::iterator m_tail;
+
+	public:
+
+		Segment();
+		~Segment();
+
+		void Initialize(const sf::RectangleShape& shape);
+		void Move(const sf::Vector2f& direction);
+		bool IsON(const sf::Sprite& other) const;
+		void Grow(const sf::Vector2f& direction);
+		//void Shrink(); Todo:
+
+		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+
 	};
 }

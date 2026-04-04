@@ -29,9 +29,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\asset_manager.hpp" />
+    <ClInclude Include="include\context.hpp" />
     <ClInclude Include="include\enum_asset_id.hpp" />
     <ClInclude Include="include\game.hpp" />
-    <ClInclude Include="include\geometric_vector.hpp" />
+    <ClInclude Include="include\game_play.hpp" />
     <ClInclude Include="include\main_menu.hpp" />
     <ClInclude Include="include\segment.hpp" />
     <ClInclude Include="include\state.hpp" />
@@ -40,7 +41,7 @@
   <ItemGroup>
     <ClCompile Include="src\asset_manager.cpp" />
     <ClCompile Include="src\game.cpp" />
-    <ClCompile Include="src\geometric_vector.cpp" />
+    <ClCompile Include="src\game_play.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\main_menu.cpp" />
     <ClCompile Include="src\segment.cpp" />

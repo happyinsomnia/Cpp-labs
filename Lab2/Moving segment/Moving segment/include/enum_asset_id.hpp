@@ -3,5 +3,6 @@
 enum class AssetID
 {
 	MAIN_FONT,
-	MAIN_TEXTURE,
+	GAME_TEXTURE,
+	SEGMENT
 };

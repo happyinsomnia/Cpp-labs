@@ -1,28 +1,47 @@
 #include "segment.hpp"
-#include<stdexcept>
+
 namespace segment
 {
-	Segment::Segment() = default;
-
-	Segment::Segment(geometry::GeometricVector start)
+	Segment::Segment() : m_body(std::list<sf::RectangleShape>(4))
 	{
-		_body.emplace(start);
+		m_head = --m_body.end();
+		m_tail = m_body.begin();
 	}
 
-	Segment::Segment(std::initializer_list<geometry::GeometricVector> init)
+	Segment::~Segment() = default;
+
+	void Segment::Initialize(const sf::RectangleShape& shape)
 	{
-		for (const auto& element : init)
-			_body.emplace(element);
+		float x = 16.f;
+		for (auto& piece : m_body)
+		{
+			piece = shape;
+			piece.setPosition({ x,16.f });
+			x += 16.f;
+		}
 	}
 
-	void Segment::move(Direction dir)
+	void Segment::Move(const sf::Vector2f& direction)
 	{
-		check_size();
+		m_tail->setPosition(m_head->getPosition() + direction);
+		m_head = m_tail;
+
+		++m_tail;
+
+		if (m_tail == m_body.end())
+		{
+			m_tail = m_body.begin();
+		}
 	}
 
-	void Segment::check_size()
+	void Segment::Grow(const sf::Vector2f& direction)
+	{}
+
+	void Segment::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
-		if (_body.size() <= 0)
-			throw std::invalid_argument("length must be positive.");
+		for (auto& piece : m_body)
+		{
+			target.draw(piece);
+		}
 	}
 }

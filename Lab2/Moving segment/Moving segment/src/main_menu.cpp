@@ -1,4 +1,5 @@
 #include "main_menu.hpp"
+#include "game_play.hpp"
 #include <stdexcept>
 
 MainMenu::MainMenu(std::shared_ptr<Context>& context) : m_context(context) {}
@@ -99,8 +100,7 @@ void MainMenu::Update(sf::Time delTime)
 
 	if (m_isPlayButtonPressed)
 	{
-		//TODO:
-		//Go to play State
+		m_context->m_states->Add(std::make_unique<GamePlay>(m_context), true);
 	}
 	if (m_isExitButtonPressed)
 		m_context->m_window->close();
