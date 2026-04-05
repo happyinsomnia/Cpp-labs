@@ -4,7 +4,7 @@
 
 #include "context.hpp"
 
-class Game	
+class Game
 {
 private:
 	std::shared_ptr<Context> m_context;

@@ -11,13 +11,15 @@ class GamePlay : public engine::State
 private:
 	std::shared_ptr<Context> m_context;
 	std::unique_ptr<sf::Sprite> m_grass;
-	
+
 	segment::Segment m_segment;
 
 	sf::Vector2f m_segmentDirection;
 
 	sf::Time m_elapsedTime;
-	
+
+	bool m_grow = false;
+	bool m_shrink = false;
 public:
 	GamePlay(std::shared_ptr<Context>& context);
 	~GamePlay();

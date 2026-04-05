@@ -12,9 +12,8 @@ namespace segment
 {
 	class Segment : public sf::Drawable
 	{
-
 	private:
-		std::list<sf::RectangleShape> m_body;	
+		std::list<sf::RectangleShape> m_body;
 		std::list<sf::RectangleShape>::iterator m_head;
 		std::list<sf::RectangleShape>::iterator m_tail;
 
@@ -24,12 +23,10 @@ namespace segment
 		~Segment();
 
 		void Initialize(const sf::RectangleShape& shape);
-		void Move(const sf::Vector2f& direction);
-		bool IsON(const sf::Sprite& other) const;
+		void Move(const sf::Vector2f& direction, const sf::Vector2u& windowSize);
 		void Grow(const sf::Vector2f& direction);
-		//void Shrink(); Todo:
+		void Shrink();
 
 		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-
 	};
 }
