@@ -37,6 +37,7 @@
     <ClInclude Include="include\segment.hpp" />
     <ClInclude Include="include\state.hpp" />
     <ClInclude Include="include\state_manager.hpp" />
+    <ClInclude Include="include\vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\asset_manager.cpp" />
@@ -46,6 +47,7 @@
     <ClCompile Include="src\main_menu.cpp" />
     <ClCompile Include="src\segment.cpp" />
     <ClCompile Include="src\state_manager.cpp" />
+    <ClCompile Include="src\vector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

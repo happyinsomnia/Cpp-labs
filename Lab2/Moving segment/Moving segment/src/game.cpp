@@ -6,7 +6,7 @@
 
 Game::Game() : m_context(std::make_shared<Context>())
 {
-	m_context->m_window->create(sf::VideoMode(sf::Vector2u(1024, 768)), "SFML works", sf::Style::Close);
+	m_context->m_window->create(sf::VideoMode(sf::Vector2u(1024, 768)), "Segment", sf::Style::Close);
 	m_context->m_states->Add(std::make_unique<MainMenu>(m_context));
 }
 

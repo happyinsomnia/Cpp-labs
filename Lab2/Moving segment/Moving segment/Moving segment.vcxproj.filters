@@ -55,6 +55,9 @@
     <ClInclude Include="include\game_play.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\asset_manager.cpp">
@@ -76,6 +79,9 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="src\game_play.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vector.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
