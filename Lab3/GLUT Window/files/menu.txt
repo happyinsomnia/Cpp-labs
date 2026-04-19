@@ -1,0 +1,35 @@
+Main Menu
+File
+New
+Open
+Save 
+Save as
+Exit
+--
+Edit
+Undo
+Redo
+Copy
+Paste
+--
+Settings
+Language Selection
+Russian Language
+English
+--
+Theme Selection
+Light Theme
+Dark Theme
+--
+Save Settings
+--
+Help
+User Guide
+About
+--
+About Program
+Simple Menu System v1.0|Created for OOP demonstration
+OK
+Details
+
+
