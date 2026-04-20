@@ -10,6 +10,7 @@ private:
 	std::string m_label;
 public:
 
+	Menu();
 	Menu(const std::string& label);
 	Menu(const std::string& label, const MenuItem& item);
 	Menu(const std::string& label, const std::vector<MenuItem> items);

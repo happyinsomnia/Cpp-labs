@@ -12,5 +12,6 @@ public:
 	MenuItem(const std::string& label);
 	MenuItem(const std::string label, const Dialog& dialog);
 
-	void Show();
+	
+	void Show() const;
 };

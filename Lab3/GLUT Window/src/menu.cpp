@@ -1,4 +1,7 @@
 #include "menu.hpp"
+#include <imgui.h>
+
+Menu::Menu() = default;
 
 Menu::Menu(const std::string& label) : m_label(label) {}
 
@@ -16,5 +19,13 @@ void Menu::AddItems(const std::vector<MenuItem> items)
 
 void Menu::Show()
 {
-	
+	ImGui::Begin(m_label.c_str(), nullptr, ImGuiWindowFlags_MenuBar);
+	if (ImGui::BeginMenuBar())
+	{
+		for (const auto& field : m_fields)
+			field.Show();
+
+		ImGui::EndMenuBar();
+	}
+	ImGui::End();
 }

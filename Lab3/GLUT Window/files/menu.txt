@@ -29,7 +29,6 @@ About
 --
 About Program
 Simple Menu System v1.0|Created for OOP demonstration
-OK
 Details
 
 

@@ -4,6 +4,10 @@
 #include <d3d11.h>
 #include <tchar.h>
 
+#include <file_reader.hpp>
+#include <menu_parser.hpp>
+#include <menu.hpp>
+
 // Data
 static ID3D11Device* g_pd3dDevice = nullptr;
 static ID3D11DeviceContext* g_pd3dDeviceContext = nullptr;
@@ -108,8 +112,12 @@ int main(int, char**)
         ImGui::NewFrame();
 
         // My code
-        
+        auto data = FileReader::Read("files/menu.txt");
 
+        Menu menu = MenuParser::Parse(data);
+        menu.Show();
+        
+        
         // Rendering
         ImGui::Render();
         const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };

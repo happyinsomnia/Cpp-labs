@@ -32,7 +32,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\menu_item.cpp" />
-    <ClCompile Include="src\parser.cpp" />
+    <ClCompile Include="src\menu_parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\action_item.hpp" />
@@ -40,7 +40,7 @@
     <ClInclude Include="include\file_reader.hpp" />
     <ClInclude Include="include\menu.hpp" />
     <ClInclude Include="include\menu_item.hpp" />
-    <ClInclude Include="include\parser.hpp" />
+    <ClInclude Include="include\menu_parser.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -132,7 +132,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Cpp-labs\Lab3\GLUT Window\include;..\imgui\imgui-1.92.7\;..\imgui\imgui-1.92.7\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cpp projects\Cpp-labs\Lab3\GLUT Window\include;C:\Cpp-labs\Lab3\GLUT Window\include;..\imgui\imgui-1.92.7\;..\imgui\imgui-1.92.7\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,7 +150,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Cpp-labs\Lab3\GLUT;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cpp projects\Cpp-labs\Lab3\GLUT Window\include;C:\Cpp-labs\Lab3\GLUT;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
