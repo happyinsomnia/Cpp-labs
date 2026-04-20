@@ -14,5 +14,6 @@ public:
 	Dialog(const ActionItem& field);
 
 	void AddField(const ActionItem& field);
+	bool IsEmpty() const;
 	void Show() const;
 };

@@ -9,6 +9,12 @@ MenuItem::MenuItem(const std::string label, const Dialog& dialog) : MenuItem(lab
 
 void MenuItem::Show() const
 {
+	if (m_dialog.IsEmpty())
+	{
+		ImGui::MenuItem(m_label.c_str());
+		return;
+	}
+
 	if (ImGui::BeginMenu(m_label.c_str()))
 	{
 		m_dialog.Show();
