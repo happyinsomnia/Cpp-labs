@@ -1,34 +1,29 @@
 Main Menu
 File
-New
-Open
-Save 
-Save as
-Exit
---
+  New
+  Open
+  Save 
+  Save as
+  Exit
 Edit
-Undo
-Redo
-Copy
-Paste
---
+  Undo
+  Redo
+  Copy
+  Paste
 Settings
-Language Selection
-Russian Language
-English
---
+  Language Selection
+    Russian
+    English
+    German
+    Italian
+    French
 Theme Selection
-Light Theme
-Dark Theme
---
+  Light Theme
+  Dark Theme
 Save Settings
---
 Help
-User Guide
-About
---
+  User Guide
+  About
 About Program
-Simple Menu System v1.0|Created for OOP demonstration
-Details
-
-
+  Simple Menu System v1.0|Created for OOP demonstration
+  Details
